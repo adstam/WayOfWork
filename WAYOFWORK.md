@@ -31,7 +31,6 @@ Architectuurbeslissingen volgen waar mogelijk de actuele Joomla Core.
 
 Bootstrapcode, dependency injection en componentinitialisatie worden gebaseerd op vergelijkbare Core-componenten en alleen aangepast wanneer de functionaliteit daarom vraagt.
 
-
 ## Modern Joomla
 
 Nieuwe code volgt de actuele Joomla Core-conventies.
@@ -183,28 +182,80 @@ Alleen wanneer dit aantoonbaar eenvoudiger is, worden exacte regelwijzigingen be
 
 ## Projectdocumentatie
 
-## Projectdocumentatie
-
 ### Generieke documentatie
 
-| Bestand           |   Status  | Doel                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `WAYOFWORK.md`    | Verplicht | Beschrijft de ontwikkelwerkwijze, samenwerking, sprintaanpak en afspraken voor het project.                                                                                                                                                                                                                                                                                                                                                      |
-| `JOOMLA_NOTES.md` | Optioneel | Bevat projectonafhankelijke Joomla-kennis die tijdens de ontwikkeling is opgedaan. Alleen geverifieerde en in de praktijk bewezen bevindingen worden opgenomen. Het document bevat geen projectspecifieke architectuur of sprintinformatie, maar dient als naslagwerk voor toekomstige ontwikkeling. Nieuwe bevindingen worden uitsluitend toegevoegd wanneer zij aantoonbaar waarde hebben voor toekomstige sprints of andere Joomla-projecten. |
+<table cellpadding="7">
+  <tr>
+    <th align="left" valign="top">Bestand</th>
+    <th align="center" valign="top">Status</th>
+    <th align="left" valign="top">Doel</th>
+  </tr>
+  <tr>
+    <td valign="top"><code>WAYOFWORK.md</code></td>
+    <td align="center" valign="top">Verplicht</td>
+    <td valign="top">Beschrijft de ontwikkelwerkwijze, samenwerking, sprintaanpak en afspraken voor het project.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>JOOMLA_NOTES.md</code></td>
+    <td align="center" valign="top">Optioneel</td>
+    <td valign="top">Bevat projectonafhankelijke Joomla-kennis die tijdens de ontwikkeling is opgedaan. Alleen geverifieerde en in de praktijk bewezen bevindingen worden opgenomen. Het document bevat geen projectspecifieke architectuur of sprintinformatie, maar dient als naslagwerk voor toekomstige ontwikkeling. Nieuwe bevindingen worden uitsluitend toegevoegd wanneer zij aantoonbaar waarde hebben voor toekomstige sprints of andere Joomla-projecten.</td>
+  </tr>
+</table>
 
 ### Projectspecifieke documentatie
 
-| Bestand                    |    Status    | Doel                                                                                                                                                                                                                                                               |
-| -------------------------- | :----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ARCHITECTURE.md`          |   Verplicht  | Beschrijft de softwarearchitectuur, ontwerpprincipes en verantwoordelijkheden van de component.                                                                                                                                                                    |
-| `ARCHITECTURE_APPENDIX.md` |   Verplicht  | Documenteert de actuele implementatie van de component. Bevat een inventaris van bestanden, verantwoordelijkheden, afhankelijkheden, status en bekende toekomstige wijzigingen, alsmede het hoofdstuk Architecture Decision Records (ADR's) met een genummerde inhoudsopgave. Samen met `ARCHITECTURE.md` vormt dit de architectuurdocumentatie van het project. |
-| `CHANGELOG_INTERN.md`      |   Verplicht  | Beschrijft alle functionele en technische wijzigingen tijdens de ontwikkeling. Dit document is uitsluitend bedoeld voor het ontwikkelteam en wordt niet openbaar gepubliceerd.                                                                                     |
-| `CHANGELOG.md`             | Vanaf v1.0.0 | Beschrijft op hoofdlijnen de wijzigingen die relevant zijn voor eindgebruikers (release notes). Technische implementatiedetails worden hierin niet opgenomen.                                                                                                      |
-| `README.md`                | Vanaf v1.0.0 | Beschrijft de functionaliteit, installatie en het gebruik van de extensie. Dit document is bedoeld voor eindgebruikers. Tijdens de ontwikkelfase is `ARCHITECTURE.md` de primaire projectdocumentatie.                                                             |
-| `ROADMAP.md`               |   Optioneel  | Beschrijft de verwachte toekomst van het project. Er wordt onderscheid gemaakt tussen geplande releases, waarschijnlijke toekomstige ontwikkelingen en gebruikerswensen (User Stories). Het document bestaat alleen wanneer hiervoor inhoud aanwezig is.           |
-| `ROADMAP_INTERN.md`      	 |   Optioneel  | Beschrijft bekende interne verbeterpunten die bewust zijn uitgesteld, bijvoorbeeld op het gebied van security, onderhoudbaarheid, performance of architectuur. Dit document wordt niet extern gepubliceerd.                                                        |
-| `NEXT_INCREMENT.md`        |   Verplicht  | Beschrijft het doel, de scope en de achtergrond van de eerstvolgende sprint. Bevat daarnaast de verwachte werkzaamheden en eventuele aanvullende bestanden die, naast de standaard projectdocumentatie, nodig zijn om de sprint uit te voeren.                     |
-| `README_NOTES.md`          |   Optioneel  | Verzamelbestand voor eindgebruikers-tekstfragmenten die uiteindelijk in README.md terechtkomen. Wordt alleen gebruikt als de op te nemen teksten niet als vanzelfsprekend uit de verplichte documentatie volgt.                                                    |
+<table cellpadding="7">
+  <tr>
+    <th align="left" valign="top">Bestand</th>
+    <th align="center" valign="top">Status</th>
+    <th align="left" valign="top">Doel</th>
+  </tr>
+  <tr>
+    <td valign="top"><code>ARCHITECTURE.md</code></td>
+    <td align="center" valign="top">Verplicht</td>
+    <td valign="top">Beschrijft de softwarearchitectuur, ontwerpprincipes en verantwoordelijkheden van de component.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>ARCHITECTURE_APPENDIX.md</code></td>
+    <td align="center" valign="top">Verplicht</td>
+    <td valign="top">Documenteert de actuele implementatie van de component. Bevat een inventaris van bestanden, verantwoordelijkheden, afhankelijkheden, status en bekende toekomstige wijzigingen, alsmede het hoofdstuk Architecture Decision Records (ADR's) met een genummerde inhoudsopgave. Samen met <code>ARCHITECTURE.md</code> vormt dit de architectuurdocumentatie van het project.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>CHANGELOG_INTERN.md</code></td>
+    <td align="center" valign="top">Verplicht</td>
+    <td valign="top">Beschrijft alle functionele en technische wijzigingen tijdens de ontwikkeling. Dit document is uitsluitend bedoeld voor het ontwikkelteam en wordt niet openbaar gepubliceerd.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>CHANGELOG.md</code></td>
+    <td align="center" valign="top">Vanaf v1.0.0</td>
+    <td valign="top">Beschrijft op hoofdlijnen de wijzigingen die relevant zijn voor eindgebruikers (release notes). Technische implementatiedetails worden hierin niet opgenomen.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>README.md</code></td>
+    <td align="center" valign="top">Vanaf v1.0.0</td>
+    <td valign="top">Beschrijft de functionaliteit, installatie en het gebruik van de extensie. Dit document is bedoeld voor eindgebruikers. Tijdens de ontwikkelfase is <code>ARCHITECTURE.md</code> de primaire projectdocumentatie.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>ROADMAP.md</code></td>
+    <td align="center" valign="top">Optioneel</td>
+    <td valign="top">Beschrijft de verwachte toekomst van het project. Er wordt onderscheid gemaakt tussen geplande releases, waarschijnlijke toekomstige ontwikkelingen en gebruikerswensen (User Stories). Het document bestaat alleen wanneer hiervoor inhoud aanwezig is.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>ROADMAP_INTERN.md</code></td>
+    <td align="center" valign="top">Optioneel</td>
+    <td valign="top">Beschrijft bekende interne verbeterpunten die bewust zijn uitgesteld, bijvoorbeeld op het gebied van security, onderhoudbaarheid, performance of architectuur. Dit document wordt niet extern gepubliceerd.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>NEXT_INCREMENT.md</code></td>
+    <td align="center" valign="top">Verplicht</td>
+    <td valign="top">Beschrijft het doel, de scope en de achtergrond van de eerstvolgende sprint. Bevat daarnaast de verwachte werkzaamheden en eventuele aanvullende bestanden die, naast de standaard projectdocumentatie, nodig zijn om de sprint uit te voeren.</td>
+  </tr>
+  <tr>
+    <td valign="top"><code>README_NOTES.md</code></td>
+    <td align="center" valign="top">Optioneel</td>
+    <td valign="top">Verzamelbestand voor eindgebruikers-tekstfragmenten die uiteindelijk in <code>README.md</code> terechtkomen. Wordt alleen gebruikt als de op te nemen teksten niet als vanzelfsprekend uit de verplichte documentatie volgt.</td>
+  </tr>
+</table>
 
 ---
 
@@ -215,10 +266,10 @@ Tijdens de ontwikkeling wordt uitsluitend gewerkt in het Nederlandse taalbestand
 
 De overige taalbestanden (`en-GB`, `fr-FR`, `de-DE`, `es-ES`) worden pas vlak voor
 iedere publicatie aangevuld. De Engelstalige bestanden zijn in de basis aanwezig, met
-het absolute minimum aan regels.
-
+het absolute minimum aan regels. 
 Deze afspraak voorkomt onnodige vragen over de status van met name de Engelstalige
 bestanden tijdens de ontwikkelfase.
+
 ---
 
 ## licentiedocumentatieblok
@@ -226,7 +277,7 @@ bestanden tijdens de ontwikkelfase.
 In Joomla is het verpicht om in ieder PHP blok een licentiedocumentatieblok op te nemen.
 
 Voor StamPlusJ projecten is dit het standaardblok waar ieder .php bestand mee opent:
-```
+```php
 <?php
 
 /**
@@ -260,11 +311,24 @@ waarbij:
 
 Voorbeelden:
 
-| Versie | Betekenis |
-|--------|-----------|
-| 0.5.1 | Eerste geaccepteerde increment van Sprint 5 |
-| 0.5.2 | Tweede geaccepteerde increment van Sprint 5 |
-| 0.6.1 | Eerste geaccepteerde increment van Sprint 6 |
+<table cellpadding="7">
+  <tr>
+    <th align="left" valign="top">Versie</th>
+    <th align="left" valign="top">Betekenis</th>
+  </tr>
+  <tr>
+    <td valign="top">0.5.1</td>
+    <td valign="top">Eerste geaccepteerde increment van Sprint 5</td>
+  </tr>
+  <tr>
+    <td valign="top">0.5.2</td>
+    <td valign="top">Tweede geaccepteerde increment van Sprint 5</td>
+  </tr>
+  <tr>
+    <td valign="top">0.6.1</td>
+    <td valign="top">Eerste geaccepteerde increment van Sprint 6</td>
+  </tr>
+</table>
 
 Iedere increment is een volledig werkende en testbare versie.
 
@@ -283,7 +347,6 @@ Na afronding van alle geplande ontwikkelsprints wordt de laatste ontwikkelversie
 ```
 
 Vanaf dat moment volgt de component de gebruikelijke Semantic Versioning (SemVer).
-
 
 # Ontwerpprincipes
 
@@ -333,19 +396,56 @@ Voor iedere sprint wordt vóór de implementatie vastgesteld welke architectuurl
 
 Per architectuurlaag wordt vastgesteld of een wijziging noodzakelijk is.
 
-| Architectuurlaag | Wijziging |
-|------------------|-----------|
-| Manifest (`<extensienaam>.xml`) | Ja / Nee |
-| Installatiebestanden | Ja / Nee |
-| Services / Dependency Injection | Ja / Nee |
-| Controller | Ja / Nee |
-| Model / Repository | Ja / Nee |
-| View | Ja / Nee |
-| Template | Ja / Nee |
-| Media (CSS / JavaScript / Images) | Ja / Nee |
-| Taalbestanden | Ja / Nee |
-| Configuratie | Ja / Nee |
-| Database | Ja / Nee |
+<table cellpadding="7">
+  <tr>
+    <th align="left" valign="top">Architectuurlaag</th>
+    <th align="left" valign="top">Wijziging</th>
+  </tr>
+  <tr>
+    <td valign="top">Manifest (<code>&lt;extensienaam&gt;.xml</code>)</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Installatiebestanden</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Services / Dependency Injection</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Controller</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Model / Repository</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">View</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Template</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Media (CSS / JavaScript / Images)</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Taalbestanden</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Configuratie</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+  <tr>
+    <td valign="top">Database</td>
+    <td valign="top">Ja / Nee</td>
+  </tr>
+</table>
 
 Alleen de noodzakelijke architectuurlagen worden gewijzigd.
 
